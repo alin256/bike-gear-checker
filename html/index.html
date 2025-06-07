@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Gear Plot</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+
+  <label>Cadence Midpoint (RPM)</label>
+  <input type="range" id="cadence-mid" min="60" max="100" value="75" step="1" oninput="update()"><span id="mid-label">75</span><br>
+
+  <label>Cadence Interval Width (±RPM)</label>
+  <input type="range" id="cadence-width" min="1" max="8" value="5" step="0.5" oninput="update()"><span id="width-label">5</span><br>
+
+  <label>Chainring (T)</label>
+  <input type="range" id="chainring" min="28" max="60" value="46" step="1" oninput="update()"><span id="chainring-label">46</span><br>
+
+  <label>Cassette</label>
+  <select id="cassette" onchange="update()">
+    <option value="Shimano CS-HG400 9s 11–34">Shimano 9s 11–34 [default]</option>
+    <!-- Add other options as needed -->
+  </select><br><br>
+
+  <div id="plot" style="height:600px;"></div>
+
+<script src="plotting.js"></script>
+</body>
+</html>

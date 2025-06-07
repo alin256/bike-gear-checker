@@ -69,7 +69,7 @@ app.layout = html.Div([
 
     html.Label("Cassette"),
     dcc.Dropdown(id="cassette", options=[{"label": k, "value": k} for k in cassettes],
-                 value="Shimano 9s 11–34"),
+                 value="Shimano CS-HG400 9s 11–34"),
 
     dcc.Graph(id="gear-graph", style={"height": "600px"}),
 
