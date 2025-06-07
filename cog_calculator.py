@@ -3,7 +3,7 @@ import math
 from cassetes_constants import cassettes
 eps_change_up = 0.0
 unavailable_set = set()
-max_cassete_size = 9
+cassete_size = 9
 # unavailable_set = set([9, 29, 31, 33, 35, 37, 38, 39, 41, 43, 45, 47, 48, 49, 51])
 
 for rpm in range(65,90,5):
@@ -23,7 +23,7 @@ for rpm in range(65,90,5):
     best_cassete = "n/a"
     for cassette in cassettes:
         cassete_cogs = cassettes[cassette]
-        if len(cassete_cogs) > max_cassete_size:
+        if len(cassete_cogs) != cassete_size:
             continue
         match = len(cassete_cogs)
         for i in range(min(len(cassete_cogs), len(cogs))):

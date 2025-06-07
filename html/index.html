@@ -18,8 +18,10 @@
   <label>Cassette</label>
   <select id="cassette" onchange="update()">
     <option value="Shimano CS-HG400 9s 11–34">Shimano 9s 11–34 [default]</option>
-    <!-- Add other options as needed -->
   </select><br><br>
+
+  <input type="file" id="tcx-upload" accept=".tcx" />
+  <div id="upload-status"></div>
 
   <div id="plot" style="height:600px;"></div>
 
